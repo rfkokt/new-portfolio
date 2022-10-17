@@ -35,7 +35,7 @@ export default function About({}: Props) {
         }}
         // ketika animasi hanya ingin 1x khusus img
         // viewport={{once: true}}
-        src="https://images.unsplash.com/photo-1534694895098-4b226f923532?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+        src="https://i.ibb.co/QKhmDkS/2.png"
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       />
 
