@@ -1,9 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-export default function About({}: Props) {
+export default function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{
@@ -35,7 +39,7 @@ export default function About({}: Props) {
         }}
         // ketika animasi hanya ingin 1x khusus img
         // viewport={{once: true}}
-        src="https://i.ibb.co/QKhmDkS/2.png"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       />
 
@@ -45,24 +49,7 @@ export default function About({}: Props) {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolorem
-          corporis voluptates dolorum ad dolore suscipit culpa omnis ipsa?
-          Dignissimos tempore facere quam qui est fugit, expedita placeat
-          adipisci maiores?Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Veritatis, illum animi ex mollitia iste, laboriosam esse nisi
-          maxime consequuntur magni numquam fugiat reiciendis optio fugit earum.
-          Quia itaque illo veritatis! Lorem, ipsum dolor sit amet consectetur
-          adipisicing elit. Magni praesentium, iure eius cum ad molestias
-          consectetur sequi ex, voluptatibus ducimus mollitia pariatur in neque!
-          Doloremque ratione illum non et. Sint. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Atque doloribus illo aliquid id amet
-          nihil provident maiores porro in iste officiis voluptates rem eum
-          assumenda, fugiat ad mollitia expedita corporis. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Omnis, beatae ullam autem minus
-          quam sunt earum dicta quas tenetur, molestiae eligendi facere
-          reprehenderit ipsam porro dolores quisquam obcaecati aut ipsa?
-        </p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
