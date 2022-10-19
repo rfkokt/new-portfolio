@@ -1,13 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { motion } from "framer-motion";
-import { PageInfo } from "../typings";
-import { urlFor } from "../sanity";
 
-type Props = {
-  pageInfo: PageInfo;
-};
+type Props = {};
 
-export default function About({ pageInfo }: Props) {
+export default function About({}: Props) {
   return (
     <motion.div
       initial={{
@@ -39,7 +36,9 @@ export default function About({ pageInfo }: Props) {
         }}
         // ketika animasi hanya ingin 1x khusus img
         // viewport={{once: true}}
-        src={urlFor(pageInfo?.profilePic).url()}
+        src={
+          "https://cdn.sanity.io/images/qtkilkn2/production/635b29a4bc95eff5f3c1710b8863087dcaa39c62-768x1024.jpg"
+        }
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       />
 
@@ -49,7 +48,18 @@ export default function About({ pageInfo }: Props) {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">{pageInfo?.backgroundInformation}</p>
+        <p className="text-base">
+          Solution-driven professional excelling in highly collaborative work
+          environment, finding solutions to challenges and focused on customer
+          satisfaction. Proven experience developing consumer-focused web sites
+          using HTML, CSS, and JavaScript. Experience building products for
+          desktop, phone and mobile app users, meeting highest standards for web
+          design, user experience, best practices, usability and speed.
+          Responding to challenges by designing and developing solutions and
+          building web applications aligned to customer's services. Translating
+          solutions into code and working across many different APIs,
+          third-party integrations and databases.
+        </p>
       </div>
     </motion.div>
   );

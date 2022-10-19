@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable @next/next/no-img-element */
 import type { GetStaticProps } from "next";
 import Head from "next/head";
@@ -11,21 +12,21 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
+// import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocials } from "../utils/fetchSocals";
 
 type Props = {
-  pageInfo: PageInfo;
+  // pageInfo: PageInfo;
   experiences: Experience[];
   skills: Skill[];
   projects: Project[];
   socials: Social[];
 };
 
-const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
+const Home = ({ experiences, projects, skills, socials }: Props) => {
   return (
     <div
       className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 
@@ -34,13 +35,19 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
     >
       <Head>
         <title>Rdev Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <Header socials={socials} />
       <section id="hero" className="snap-start">
-        <Hero pageInfo={pageInfo} />
+        <Hero />
       </section>
       <section id="about" className="snap-center">
-        <About pageInfo={pageInfo} />
+        <About />
       </section>
 
       <section id="experience" className="snap-center">
@@ -77,11 +84,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocials();
-  const pageInfo: PageInfo = await fetchPageInfo();
+  // const pageInfo: PageInfo = await fetchPageInfo();
 
   return {
     props: {
-      pageInfo,
+      // pageInfo,
       experiences,
       skills,
       projects,
