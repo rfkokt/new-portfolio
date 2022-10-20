@@ -18,6 +18,11 @@ export default {
       },
     },
     {
+      name: "description",
+      title: "Description of the project",
+      type: "string",
+    },
+    {
       name: "summary",
       title: "Summary",
       type: "string",

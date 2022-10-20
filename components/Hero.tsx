@@ -32,10 +32,10 @@ export default function Hero({}: Props) {
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <Cursor cursorColor="#00ADB5" />
         </h1>
 
-        <div className="pt-5">
+        <div className="pt-5 space-y-3 space-x-3">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

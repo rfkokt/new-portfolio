@@ -43,23 +43,25 @@ export default function About({}: Props) {
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       />
 
-      <div className="space-y-10 px-0 md:px-10">
+      <div className="space-y-5 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
           Here is a{" "}
-          <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
+          <span className="underline decoration-[#00ADB5]/50">little</span>{" "}
           background
         </h4>
         <p className="text-base">
           Solution-driven professional excelling in highly collaborative work
           environment, finding solutions to challenges and focused on customer
           satisfaction. Proven experience developing consumer-focused web sites
-          using HTML, CSS, and JavaScript. Experience building products for
-          desktop, phone and mobile app users, meeting highest standards for web
-          design, user experience, best practices, usability and speed.
-          Responding to challenges by designing and developing solutions and
-          building web applications aligned to customer's services. Translating
-          solutions into code and working across many different APIs,
-          third-party integrations and databases.
+          using HTML, CSS, and JavaScript.
+        </p>
+        <p className="hidden md:block">
+          Experience building products for desktop, phone and mobile app users,
+          meeting highest standards for web design, user experience, best
+          practices, usability and speed. Responding to challenges by designing
+          and developing solutions and building web applications aligned to
+          customer's services. Translating solutions into code and working
+          across many different APIs, third-party integrations and databases.
         </p>
       </div>
     </motion.div>

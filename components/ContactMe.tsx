@@ -21,34 +21,34 @@ export default function ContactMe({}: Props) {
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+      <div className="flex flex-col space-y-5">
+        <h4 className="text-xl md:text-4xl font-semibold text-center">
           I have got just what you need.
-          <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
+          <span className="decoration-[#00ADB5]/50 underline">Lets Talk.</span>
         </h4>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <HiPhone className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+6289635112452</p>
+            <HiPhone className="text-[#00ADB5] h-7 w-7 animate-pulse" />
+            <p className="text-xl md:text-2xl">+6289635112452</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <HiEnvelope className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">rifkiokta105@gmail.com</p>
+            <HiEnvelope className="text-[#00ADB5] h-7 w-7 animate-pulse" />
+            <p className="text-xl md:text-2xl">rifkiokta105@gmail.com</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <HiMapPin className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">123 Duta Kranji, Bekasi</p>
+            <HiMapPin className="text-[#00ADB5] h-7 w-7 animate-pulse" />
+            <p className="text-xl md:text-2xl">123 Duta Kranji, Bekasi</p>
           </div>
         </div>
 
         <form
           action=""
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 w-full md:w-fit mx-auto"
         >
-          <div className="flex space-x-2">
+          <div className="space-x-2 hidden md:flex">
             <input
               {...register("name")}
               placeholder="Name"
@@ -63,6 +63,18 @@ export default function ContactMe({}: Props) {
             />
           </div>
           <input
+            {...register("name")}
+            placeholder="Name"
+            className="contactInput md:hidden"
+            type="text"
+          />
+          <input
+            {...register("email")}
+            placeholder="Email"
+            className="contactInput md:hidden"
+            type="email"
+          />
+          <input
             {...register("subject")}
             placeholder="Subject"
             className="contactInput"
@@ -75,7 +87,7 @@ export default function ContactMe({}: Props) {
           />
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-[#00ADB5] py-5 px-10 rounded-md text-black font-bold text-lg"
           >
             Submit
           </button>

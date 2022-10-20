@@ -29,8 +29,8 @@ type Props = {
 const Home = ({ experiences, projects, skills, socials }: Props) => {
   return (
     <div
-      className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 
-    overflow-x-hidden scrollbar scrollbar-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
+      className="bg-[#181818] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 
+    overflow-x-hidden scrollbar scrollbar-gray-400/20 scrollbar-thumb-[#00ADB5]/80
     "
     >
       <Head>
@@ -69,7 +69,7 @@ const Home = ({ experiences, projects, skills, socials }: Props) => {
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer ">
           <div className="flex items-center justify-center">
-            <HiArrowUpCircle className="text-[#F7AB0A] h-10 w-10 animate-pulse" />
+            <HiArrowUpCircle className="text-[#00ADB5] h-10 w-10 animate-pulse" />
           </div>
         </footer>
       </Link>
